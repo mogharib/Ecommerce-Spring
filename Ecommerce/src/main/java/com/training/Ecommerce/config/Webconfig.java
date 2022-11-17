@@ -1,4 +1,4 @@
-package com.educative.ecommerce.config;
+package com.training.Ecommerce.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

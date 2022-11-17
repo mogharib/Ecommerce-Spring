@@ -1,13 +1,10 @@
-package com.educative.ecommerce.controller;
+package com.training.Ecommerce.controller;
 
-import com.educative.ecommerce.common.ApiResponse;
-import com.educative.ecommerce.dto.ProductDto;
-import com.educative.ecommerce.model.Category;
-import com.educative.ecommerce.model.Product;
-import com.educative.ecommerce.repository.CategoryRepo;
-import com.educative.ecommerce.service.ProductService;
-import io.swagger.annotations.Api;
-import io.swagger.models.auth.In;
+import com.training.Ecommerce.dto.ProductDto;
+import com.training.Ecommerce.model.Category;
+import com.training.Ecommerce.repository.CategoryRepo;
+import com.training.Ecommerce.service.ProductService;
+import com.training.Ecommerce.common.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -50,7 +47,7 @@ public class ProductController {
 
 
     @PostMapping("/update/{productId}")
-    public ResponseEntity<ApiResponse> updateProduct(@PathVariable("productId") Integer productId, @RequestBody ProductDto productDto) throws Exception {
+    public ResponseEntity<ApiResponse> updateProduct(@PathVariable("productId") String productId, @RequestBody ProductDto productDto) throws Exception {
         Optional<Category> optionalCategory = categoryRepo.findById(productDto.getCategoryId());
         if (!optionalCategory.isPresent()) {
             return new ResponseEntity<ApiResponse>(new ApiResponse(false, "category does not exists"), HttpStatus.BAD_REQUEST);

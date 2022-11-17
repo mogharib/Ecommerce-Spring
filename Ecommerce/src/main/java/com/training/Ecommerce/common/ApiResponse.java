@@ -1,5 +1,4 @@
-package com.educative.ecommerce.common;
-
+package com.training.Ecommerce.common;
 import java.time.LocalDateTime;
 
 public class ApiResponse {

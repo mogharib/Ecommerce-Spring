@@ -1,8 +1,8 @@
-package com.educative.ecommerce.controller;
+package com.training.Ecommerce.controller;
 
-import com.educative.ecommerce.common.ApiResponse;
-import com.educative.ecommerce.model.Category;
-import com.educative.ecommerce.service.CategoryService;
+import com.training.Ecommerce.model.Category;
+import com.training.Ecommerce.service.CategoryService;
+import com.training.Ecommerce.common.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/catgory")
+@RequestMapping("/category")
 public class CategoryController {
 
     @Autowired
@@ -24,7 +24,7 @@ public class CategoryController {
 
 
     @PostMapping("/create")
-    public ResponseEntity<ApiResponse> createCategory(@RequestBody Category category) {
+    public ResponseEntity<com.training.Ecommerce.common.ApiResponse> createCategory(@RequestBody Category category) {
         categoryService.createCategory(category);
         return new ResponseEntity<>(new ApiResponse(true, "a new category created"), HttpStatus.CREATED);
     }

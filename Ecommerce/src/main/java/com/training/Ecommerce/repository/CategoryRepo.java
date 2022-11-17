@@ -1,6 +1,7 @@
-package com.educative.ecommerce.repository;
+package com.training.Ecommerce.repository;
 
-import com.educative.ecommerce.model.Category;
+
+import com.training.Ecommerce.model.Category;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

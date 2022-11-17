@@ -1,9 +1,9 @@
-package com.educative.ecommerce.service;
+package com.training.Ecommerce.service;
 
-import com.educative.ecommerce.dto.ProductDto;
-import com.educative.ecommerce.model.Category;
-import com.educative.ecommerce.model.Product;
-import com.educative.ecommerce.repository.ProductRepository;
+import com.training.Ecommerce.dto.ProductDto;
+import com.training.Ecommerce.model.Category;
+import com.training.Ecommerce.model.Product;
+import com.training.Ecommerce.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -47,7 +47,7 @@ public class ProductService {
         return productDtos;
     }
 
-    public void updateProduct(ProductDto productDto, Integer productId) throws Exception {
+    public void updateProduct(ProductDto productDto, String productId) throws Exception {
         Optional<Product> optionalProduct = productRepository.findById(productId);
         // throw an exception if product does not exists
         if (!optionalProduct.isPresent()) {

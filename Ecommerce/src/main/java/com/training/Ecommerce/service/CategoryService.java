@@ -1,7 +1,7 @@
-package com.educative.ecommerce.service;
+ package com.training.Ecommerce.service;
 
-import com.educative.ecommerce.model.Category;
-import com.educative.ecommerce.repository.CategoryRepo;
+import com.training.Ecommerce.model.Category;
+import com.training.Ecommerce.repository.CategoryRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

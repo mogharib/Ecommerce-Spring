@@ -1,4 +1,4 @@
-package com.educative.ecommerce.dto;
+package com.training.Ecommerce.dto;
 
 import javax.validation.constraints.NotNull;
 
